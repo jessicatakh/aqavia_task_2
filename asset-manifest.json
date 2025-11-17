@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aqavia_task_2/static/css/main.9a497ec6.css",
+    "main.js": "/aqavia_task_2/static/js/main.f4cf1a6c.js",
+    "index.html": "/aqavia_task_2/index.html",
+    "main.9a497ec6.css.map": "/aqavia_task_2/static/css/main.9a497ec6.css.map",
+    "main.f4cf1a6c.js.map": "/aqavia_task_2/static/js/main.f4cf1a6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a497ec6.css",
+    "static/js/main.f4cf1a6c.js"
+  ]
+}
