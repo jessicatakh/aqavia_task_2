@@ -1,24 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthLayout from "./layout/AuthLayout";
+import UserLayout from "./layout/UserLayout";
+import AdminLayout from "./layout/AdminLayout";
+import Login from "./pages/forAuth/Login";
+import Register from "./pages/forAuth/Register";
+import UserHome from "./pages/forUser/UserHome";
+import AdminHome from "./pages/forAdmin/AdminHome";
+import AdminRoute from "./routes/AdminRoute";
+import UserRoute from "./routes/UserRoute";
+import UsersPage from "./pages/forAdmin/UsersPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <BrowserRouter>
+      <Routes>
+
+        
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
+
+          <Route path="/register" element={<Register />} />
+        </Route>
+
+        <Route
+          path="/user"
+          element={
+            <UserRoute>
+              <UserLayout />
+            </UserRoute>
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route index element={<UserHome />} />
+        </Route>
+
+
+        <Route
+          path="/admin"
+          element={
+            <AdminRoute>
+              <AdminLayout />
+            </AdminRoute>
+          }
+        >
+          <Route index element={<AdminHome />} />
+          
+        </Route>
+                <Route
+          path="/admin/users"
+          element={
+            <AdminRoute>
+              <AdminLayout />
+            </AdminRoute>
+          }
+        >
+          <Route index element={< UsersPage />} />
+        </Route>
+        
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

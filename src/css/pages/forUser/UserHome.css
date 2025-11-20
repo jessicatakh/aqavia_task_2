@@ -1,0 +1,15 @@
+/* src/pages/user/UserHome.css */
+
+.user-home {
+  padding: 20px;
+}
+
+.user-home h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.user-home p {
+  font-size: 16px;
+  color: #555;
+}

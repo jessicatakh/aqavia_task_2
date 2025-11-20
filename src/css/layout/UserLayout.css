@@ -1,0 +1,13 @@
+/* src/layouts/UserLayout.css */
+
+.user-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+}
+
+.user-content {
+  padding: 20px;
+  flex: 1;
+}
